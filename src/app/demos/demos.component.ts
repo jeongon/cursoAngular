@@ -42,7 +42,7 @@ public estetica = {error: true, importante: false, urgente: true};
     this.resultado = `Diciendo ${this.nombre}  elque:${algo}`;
   }
 
-  public cambia(){
+  public cambia() {
     this.visible = !this.visible;
     this.estetica.error = !this.estetica.error;
     this.estetica.importante = !this.estetica.importante;
