@@ -10,10 +10,14 @@ import { ClientesModule } from './clientes/clientes.module';
 import { ProveedoresModule } from './proveedores/proveedores.module';
 import { CommonAppModule } from './common-app/common-app.module';
 import { environment } from 'src/environments/environment';
+import { HomeComponent } from './home/home.component';
+import { DemosComponent } from './demos/demos.component';
 // FormsModule
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    DemosComponent
   ],
   imports: [
     BrowserModule, FormsModule,
