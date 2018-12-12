@@ -1,0 +1,43 @@
+<form #miForm="ngForm">
+<p>
+
+
+        Código:
+        <ng-container *ngIf="VM.Modo === 'add'">
+
+        <input type="number" name="id" id="id" [(ngModel)]="VM.Elemento.id" #id="ngModel">
+        <br>
+        </ng-container>
+
+        <ng-container *ngIf="VM.Modo !== 'add'">
+
+            {{VM.Elemento.id}}
+            <br>
+        </ng-container>
+    
+                
+
+
+        Nombre: 
+        <input type="text" name="nombre" id="nombre" [(ngModel)]="VM.Elemento.nombre" #nombre="ngModel">
+        <br>
+
+ 
+
+        Apellidos:
+        <input type="text" name="apellidos" id="apellidos" [(ngModel)]="VM.Elemento.apellidos" #apellidos="ngModel">
+        <br>
+
+
+        edad:
+        {{VM.Elemento.edad}} 
+        <input type="number" name="edad" id="edad" [(ngModel)]="VM.Elemento.edad" #edad="ngModel">
+        <br>
+
+</p>
+
+<p>
+    <input type="button" value="volver" (click)="VM.cancel()">
+    <input type="button" value="enviar" (click)="VM.send()">
+
+</p>

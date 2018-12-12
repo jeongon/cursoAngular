@@ -11,3 +11,26 @@
     border-radius: 10px;
 
 }
+
+.center {
+    text-align: center;
+  }
+  
+  form {
+    .ng-pristine {
+      border-color: navy;
+      box-shadow: 5px 5px 5px navy;
+    }
+    .ng-dirty {
+      border-color: green;
+      box-shadow: 5px 5px 5px green;
+    }
+    .ng-invalid {
+      border-color: @colorError !important;
+      box-shadow: 5px 5px 5px @colorError !important;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      transform: scale(1.02);
+      transition: all linear 1s;
+    }
+  }
