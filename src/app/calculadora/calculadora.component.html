@@ -22,21 +22,23 @@
 </tr>
 <tr>
     
-        <td><input type="button"  value="4"      (click)="addNumber(4)" > </td>
-        <td><input type="button"  value="5"      (click)="addNumber(5)" > </td>
-        <td><input type="button"  value="6"    (click)="addNumber(6)" > </td>
+                <td *ngFor="let n of [4,5,6]">
+                        <input type="button"  value="{{n}}"      (click)="addNumber( n )" >
+                </td>
     
 </tr>
 
-             
+                <tr>
+
+                <td *ngFor="let n of [7,8,9]">
+                <input type="button"  value="{{n}}"      (click)="addNumber( n )" >
+                </td>
+
+                </tr>
 
 <tr>
 
-<td><input type="button"  value="7"      (click)="addNumber(7)" > </td>
-        <td><input type="button"  value="8"      (click)="addNumber(8)" > </td>
-        <td><input type="button"  value="9"      (click)="addNumber(9)" > </td>
-    
-</tr>
+
 
 <tr>
     

@@ -5,7 +5,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 selector: 'indra-sizer',
 
 template: ` <div>
-<button (click)="dec()">-</button><button (click)="inc()">+</button>
+<button (click)="dec()">-</button>
+<button (click)="inc()">+</button>
 <label [style.font-size.px]="size">FontSize: {{size}}px</label>
 </div>`
 })
