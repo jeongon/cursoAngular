@@ -1,0 +1,59 @@
+<table>
+<tr>
+        <td colspan="3">
+        <textarea [(ngModel)]="historico" [rows]="alto" cols="50" ></textarea>
+        </td>
+    
+</tr>
+<tr>
+    <td colspan="3">
+    <input type="text" [(ngModel)]="operacion" #varOperacion><br>
+    </td>
+
+</tr>
+
+
+<tr>
+    
+    <td><input type="button"  value="1"      (click)="addNumber(1)" > </td>
+    <td><input type="button"  value="2"      (click)="addNumber(2)" > </td>
+    <td><input type="button"  value="3"      (click)="addNumber(3)" > </td>
+
+</tr>
+<tr>
+    
+        <td><input type="button"  value="4"      (click)="addNumber(4)" > </td>
+        <td><input type="button"  value="5"      (click)="addNumber(5)" > </td>
+        <td><input type="button"  value="6"    (click)="addNumber(6)" > </td>
+    
+</tr>
+
+             
+
+<tr>
+
+<td><input type="button"  value="7"      (click)="addNumber(7)" > </td>
+        <td><input type="button"  value="8"      (click)="addNumber(8)" > </td>
+        <td><input type="button"  value="9"      (click)="addNumber(9)" > </td>
+    
+</tr>
+
+<tr>
+    
+        <td><input type="button"  value="+"  (click) = "addOperator('+')" > </td>
+        <td><input type="button"  value="-"  (click) = "addOperator('-')" > </td>
+        <td><input type="button"  value="0"  (click) = "addNumber(0)" > </td>
+        
+    
+ </tr>
+        <tr>
+    
+                
+                
+                <td colspan="2"><input type="button"  value="CE"  (click) = "exeCE()" > </td>
+                <td><input type="button"  value="="  (click) = "getResultado()" > </td>
+            
+         </tr>
+
+</table>
+
