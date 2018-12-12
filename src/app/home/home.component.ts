@@ -9,20 +9,21 @@ import { LoggerService } from 'src/indra-core';
 })
 export class HomeComponent implements OnInit {
   title = 'Hola Mundo';
-  constructor(notify: NotificationService, out: LoggerService) {
-    notify.add('Esto es una notificacion de error');
-    notify.add('Esto es una notificacion de error',NotificationType.warn);
-    notify.remove(0);
-    notify.add(null);
-    notify.remove(0);
-    out.info('es info');
-    out.warn('es warn');
-    out.error('es error');
-    out.log('es log');
+  constructor(private notify: NotificationService, private out: LoggerService) {
+
 
   }
 
   ngOnInit() {
+    this.notify.add('Esto es una notificacion de error');
+    this.notify.add('Esto es una notificacion de error', NotificationType.warn);
+    this.notify.remove(0);
+    this.notify.add(null);
+    this.notify.remove(0);
+    this.out.info('es info');
+    this.out.warn('es warn');
+    this.out.error('es error');
+    this.out.log('es log');
   }
 
 }

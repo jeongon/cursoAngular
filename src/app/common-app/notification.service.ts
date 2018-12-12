@@ -31,9 +31,9 @@ export class NotificationService {
   constructor(private out: LoggerService) { }
 
   // clonamos el listado para evitar modificar el original
-  public get Listado() { return Object.assign([], this.Listado); }
+  public get Listado() { return Object.assign([], this.lista); }
 
-  public get HayNotificaciones() { return this.Listado.length > 0; }
+  public get HayNotificaciones() { return this.lista.length > 0; }
 
   public add(msg: string, type: NotificationType= NotificationType.error ): void {
 
