@@ -19,6 +19,8 @@ import { PERSONAS_COMPONENT } from './personas/personas.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PersonasViewModelService, PersonasViewModelDAOService } from './personas/personas.service';
 import { AuthInterceptor } from './seguridad/seguridad.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 // FormsModule
@@ -30,7 +32,9 @@ import { AuthInterceptor } from './seguridad/seguridad.service';
     NotificationComponent,
     DinamicoComponent,
     CalculadoraComponent,
-    PERSONAS_COMPONENT
+    PERSONAS_COMPONENT,
+    PageNotFoundComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
