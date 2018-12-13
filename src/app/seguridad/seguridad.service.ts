@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private isAuth = true;
+  // tslint:disable-next-line:max-line-length
   private authToken: string = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiYWRtaW4iLCJleHBpcmVzSW4iOiIxaCIsImlhdCI6MTU0NDY5NDYzNH0.8rwGOONC_WFitwPznnG2_LdWBJCejO8aBhoy0SrtKxU';
   private name = 'admin';
   constructor() {
