@@ -6,23 +6,31 @@ import { DemosComponent } from './demos/demos.component';
 import { PersonasViewComponent, PersonasListComponent, PersonasAddComponent, PersonasEditComponent } from './personas/personas.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+
+
 const routes: Routes = [
-  {path: '', pathMatch: 'full', component: HomeComponent},
-  {path: 'inicio', component: HomeComponent},
-  {path: 'demos',  component: DemosComponent},
-  {path: 'chisme/de/hacer/numeros',  component: CalculadoraComponent},
-  {path: 'personas',  component: PersonasListComponent},
-  {path: 'personas/add',  component: PersonasAddComponent},
-  {path: 'personas/:id/:edit',  component: PersonasEditComponent},
-  {path: 'personas/:id',  component: PersonasViewComponent},
-  {path: 'personas/:id/:kk',  component: PersonasViewComponent},
-  {path: 'personas/grillo',  redirectTo: '/personas/2'},
-  {path: '404.html', component: PageNotFoundComponent},
-  {path: '**',        redirectTo: '/404.html'}
-
-
-
+  { path: '', pathMatch: 'full', component: HomeComponent},
+  { path: 'inicio', component: HomeComponent},
+  { path: 'demos', component: DemosComponent},
+  { path: 'chisme/de/hacer/numeros', component: CalculadoraComponent},
+  { path: 'personas', component: PersonasListComponent},
+  { path: 'personas/add', component: PersonasAddComponent},
+  { path: 'personas/:id/edit', component: PersonasEditComponent},
+  { path: 'personas/:id', component: PersonasViewComponent},
+  { path: 'personas/:id/:kk', component: PersonasViewComponent},
+  { path: 'empleados', children: [
+      { path: '', component: PersonasListComponent},
+      { path: 'add', component: PersonasAddComponent},
+      { path: ':id/edit', component: PersonasEditComponent},
+      { path: ':id', component: PersonasViewComponent},
+      { path: ':id/:kk', component: PersonasViewComponent},
+  ]},
+  { path: 'pepito/grillo', redirectTo: '/personas/2'},
+  { path: '404.html', component: PageNotFoundComponent},
+  { path: '**', redirectTo: '/404.html'},
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
